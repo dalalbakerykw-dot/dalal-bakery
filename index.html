@@ -1523,8 +1523,8 @@
     <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">100.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
     <div style="background:#f0fff4;border-radius:8px;padding:12px 14px;font-size:0.82rem;color:#1e5c38;margin-top:16px;direction:rtl;text-align:right;">
       <div style="font-weight:700;margin-bottom:6px;">دفعة ثانية — تأسيس أعمال الكهرباء</div>
-      <div>المدفوع: <strong>300 د.ك</strong> من إجمالي <strong>450 د.ك</strong></div>
-      <div style="color:#f39c12;margin-top:4px;">المتبقي: <strong>150 د.ك</strong></div>
+      <div>المدفوع: <strong>300 د.ك</strong> من إجمالي <strong>410 د.ك</strong></div>
+      <div style="color:#f39c12;margin-top:4px;">المتبقي: <strong>110 د.ك</strong></div>
     </div>
   </div>
 </div>
@@ -1875,7 +1875,7 @@
     { date: '10 مايو 2026', label: 'فتحات تهوية ومداخن',   note: 'أعمال إنشائية',               status: 'مدفوع', amount: 25,   paid: 25,   remaining: 0,   isDeposit: false, receipt: 'sidi-25'   },
     { date: 'مايو 2026',    label: 'هدم المحل بالكامل',    note: 'أعمال ديكور · مقاول محمود',   status: 'مدفوع', amount: 170,  paid: 170,  remaining: 0,   isDeposit: false, receipt: 'wamd-170'  },
     { date: '13 مايو 2026', label: 'بلاط وحوائط',          note: 'شركة الفلاح · عقد رقم 19901', status: 'مدفوع', amount: 380,  paid: 380,  remaining: 0,   isDeposit: false, invoice: 'falah'     },
-    { date: 'مايو 2026',    label: 'تأسيس أعمال الكهرباء', note: 'تأسيس كهرباء · مقاول محمود',  status: 'جزئي',  amount: 450,  paid: 300,  remaining: 150, isDeposit: false, receipt: 'wamd-250', receipt2: 'wamd-elec-100' },
+    { date: 'مايو 2026',    label: 'تأسيس أعمال الكهرباء', note: 'تأسيس كهرباء · مقاول محمود',  status: 'مدفوع', amount: 410,  paid: 410,  remaining: 0,   isDeposit: false, receipt: 'wamd-250', receipt2: 'wamd-elec-100', receipt3: 'wamd-elec-110' },
     { date: 'مايو 2026',    label: 'أغراض تركيب الأرضيات والحوائط', note: 'مواد وأغراض تركيب · مقاول محمود', status: 'مدفوع', amount: 98, paid: 98, remaining: 0, isDeposit: false, receipt: 'wamd-98' },
     { date: 'مايو 2026',    label: 'تأسيس الصحي والسباكة', note: 'تأسيس سباكة · مقاول محمود',   status: 'مدفوع', amount: 80,   paid: 80,   remaining: 0,   isDeposit: false, receipt: 'wamd-250', receipt2: 'wamd-30'  },
     { date: 'مايو 2026',    label: 'تركيب السيراميك',       note: 'مقاول محمود · إجمالي 350 د.ك', status: 'مدفوع', amount: 350,  paid: 350,  remaining: 0,   isDeposit: false, receipt: 'wamd-ceramic-100', receipt2: 'wamd-ceramic-250' },
@@ -1890,6 +1890,7 @@
     { date: '24 مايو 2026', label: 'صيانة التكييف المركزي', note: 'صيانة نظام التكييف المركزي · USMAN G***I A***I', status: 'مدفوع', amount: 20, paid: 20, remaining: 0, isDeposit: false, receipt: 'wamd-ac-20' },
     { date: '24 مايو 2026', label: 'معدات كهربائية (العربية للإضاءة)', note: 'شراء معدات كهربائية · فاتورة العربية للإضاءة', status: 'مدفوع', amount: 62.800, paid: 62.800, remaining: 0, isDeposit: false, receipt: 'arabic-elec-62' },
     { date: '24 مايو 2026', label: 'وايرات وبراغي (الماس للتجارة)', note: 'مؤسسة الماس الفنية التجارة العامة · فاتورة نقدية · 24/05/2026', status: 'مدفوع', amount: 18.250, paid: 18.250, remaining: 0, isDeposit: false, receipt: 'almas-18' },
+    { date: '25 مايو 2026', label: 'فك وتركيب المدخنة والشفاط', note: 'مقدم · MESHAL M***H F***D A***D · إجمالي 170 د.ك', status: 'جزئي', amount: 170, paid: 70, remaining: 100, isDeposit: false, receipt: 'wamd-chimney-70' },
     { date: 'مايو 2026',    label: 'رخام مدخل + أغراض سيراميك', note: 'تركيب رخام المدخل وأغراض استكمال السيراميك · مقاول محمود', status: 'مدفوع', amount: 88, paid: 88, remaining: 0, isDeposit: false, receipt: 'wamd-88' },
   ];
 
@@ -1921,6 +1922,7 @@
     const invoiceBtn   = e.invoice ? `<br><button class="attach-btn" onclick="openModal('${e.invoice}')">${invoiceLabels[e.invoice]||'📎 مستند'}</button>` : '';
     const receiptBtn   = e.receipt  ? `<br><button class="attach-btn" style="background:#f0fff4;border-color:#b2dfcb;color:#1e5c38;" onclick="openModal('${e.receipt}')">📱 وصل التحويل</button>` : '';
     const receipt2Btn  = e.receipt2 ? `<button class="attach-btn" style="background:#f0fff4;border-color:#b2dfcb;color:#1e5c38;margin-right:4px;" onclick="openModal('${e.receipt2}')">📱 وصل الإكمال</button>` : '';
+    const receipt3Btn  = e.receipt3 ? `<button class="attach-btn" style="background:#f0fff4;border-color:#b2dfcb;color:#1e5c38;margin-right:4px;" onclick="openModal('${e.receipt3}')">📱 وصل الإنجاز</button>` : '';
     const paidCell     = `<td class="amount-cell paid-cell">KD ${e.paid.toLocaleString()}</td>`;
     const remCell      = e.remaining > 0
       ? `<td class="amount-cell remain-cell">KD ${e.remaining.toLocaleString()}</td>`
@@ -1929,7 +1931,7 @@
     setupTbody.innerHTML += `
       <tr${e.isDeposit ? ' class="highlight-row"' : ''}>
         <td style="font-size:0.82rem;color:#7a8ab0;">${e.date}</td>
-        <td>${e.label}${depositNote}<br><small style="color:#a0aec0;font-size:0.73rem;">${e.note}</small>${invoiceBtn}${receiptBtn}${receipt2Btn}</td>
+        <td>${e.label}${depositNote}<br><small style="color:#a0aec0;font-size:0.73rem;">${e.note}</small>${invoiceBtn}${receiptBtn}${receipt2Btn}${receipt3Btn}</td>
         <td>${badge(e.status)}</td>
         <td class="amount-cell" style="color:${amtColor};">KD ${e.amount.toLocaleString()}</td>
         ${paidCell}
@@ -2459,6 +2461,43 @@
     </div>
     <div style="text-align:center;font-size:2rem;font-weight:900;color:#1a2a6c;">18.250 <span style="font-size:1rem;color:#7a8ab0;">KWD</span></div>
     <div style="text-align:center;margin-top:8px;font-size:0.78rem;color:#27ae60;font-weight:700;">✅ APPROVED · AUTH 516060</div>
+  </div>
+</div>
+
+
+<!-- وصل WAMD 110 د.ك — آخر دفعة الكهرباء -->
+<div class="modal-overlay" id="modal-wamd-elec-110" onclick="if(event.target===this)closeModal('wamd-elec-110')">
+  <div class="modal-box" style="max-width:360px;text-align:center;direction:ltr;">
+    <button class="modal-close" onclick="closeModal('wamd-elec-110')">✕</button>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
+      <div style="width:36px;height:36px;background:#f5c800;border-radius:6px;"></div>
+      <div style="width:24px;height:36px;background:#2563eb;border-radius:6px;transform:skewX(-8deg);"></div>
+      <span style="font-size:1.4rem;font-weight:900;color:#111;letter-spacing:1px;">WAMD</span>
+    </div>
+    <div style="font-size:0.72rem;color:#7a8ab0;margin-bottom:16px;">Powered by KNET</div>
+    <div style="font-size:1rem;font-weight:700;color:#111;margin-bottom:6px;">تمت العملية بنجاح</div>
+    <div style="font-size:0.85rem;color:#7a8ab0;margin-bottom:10px;">تم الدفع إلى</div>
+    <div style="font-size:0.88rem;font-weight:700;color:#1a2a6c;letter-spacing:1px;margin-bottom:16px;">MAHMOUD H***N E***D B***Y</div>
+    <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">110.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
+    <div style="background:#f0fff4;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#1e5c38;margin-top:16px;direction:rtl;font-weight:600;">✅ آخر دفعة — تأسيس أعمال الكهرباء · المجموع 410 د.ك</div>
+  </div>
+</div>
+
+<!-- وصل WAMD 70 د.ك — مقدم فك وتركيب المدخنة والشفاط -->
+<div class="modal-overlay" id="modal-wamd-chimney-70" onclick="if(event.target===this)closeModal('wamd-chimney-70')">
+  <div class="modal-box" style="max-width:360px;text-align:center;direction:ltr;">
+    <button class="modal-close" onclick="closeModal('wamd-chimney-70')">✕</button>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
+      <div style="width:36px;height:36px;background:#f5c800;border-radius:6px;"></div>
+      <div style="width:24px;height:36px;background:#2563eb;border-radius:6px;transform:skewX(-8deg);"></div>
+      <span style="font-size:1.4rem;font-weight:900;color:#111;letter-spacing:1px;">WAMD</span>
+    </div>
+    <div style="font-size:0.72rem;color:#7a8ab0;margin-bottom:16px;">Powered by KNET</div>
+    <div style="font-size:1rem;font-weight:700;color:#111;margin-bottom:6px;">تمت العملية بنجاح</div>
+    <div style="font-size:0.85rem;color:#7a8ab0;margin-bottom:10px;">تم الدفع إلى</div>
+    <div style="font-size:0.88rem;font-weight:700;color:#1a2a6c;letter-spacing:1px;margin-bottom:16px;">MESHAL M***H F***D A***D</div>
+    <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">70.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
+    <div style="background:#fff8e1;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#7d5a00;margin-top:16px;direction:rtl;font-weight:600;">⏳ مقدم فك وتركيب المدخنة والشفاط — باقي 100 د.ك · الإجمالي 170 د.ك</div>
   </div>
 </div>
 

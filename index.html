@@ -1884,13 +1884,14 @@
     { date: 'مايو 2026',    label: 'أعمال الديكور',           note: 'مقاول محمود · إجمالي 230 د.ك', status: 'مدفوع', amount: 230, paid: 230, remaining: 0, isDeposit: false, receipt: 'wamd-decor-130', receipt2: 'wamd-decor-100' },
     { date: '20 مايو 2026', label: 'بلاط متداخل',              note: 'ACICO Group · Center Laize · طلب 17907', status: 'مدفوع', amount: 45.300, paid: 45.300, remaining: 0, isDeposit: false, receipt: 'acico-tiles' },
     { date: '21 مايو 2026', label: 'أجور تركيب البلاط الخارجي', note: 'تركيب البلاط المتداخل الخارجي · مقاول محمود', status: 'مدفوع', amount: 60, paid: 60, remaining: 0, isDeposit: false, receipt: 'wamd-tile-60' },
-    { date: '22 مايو 2026', label: 'زجاج',                       note: 'تركيب زجاج المحل · إجمالي 280 د.ك · Narasimhulu', status: 'جزئي', amount: 280, paid: 180, remaining: 100, isDeposit: false, receipt: 'wamd-glass-180' },
+    { date: '22 مايو 2026', label: 'زجاج',                       note: 'تركيب زجاج المحل · إجمالي 280 د.ك · Narasimhulu', status: 'مدفوع', amount: 280, paid: 280, remaining: 0, isDeposit: false, receipt: 'wamd-glass-180', receipt2: 'wamd-glass-100' },
     { date: '22 مايو 2026', label: 'إضاءة (العربية للإضاءة)',      note: 'شراء إضاءة · NARINEH A***S · 66043848', status: 'مدفوع', amount: 60, paid: 60, remaining: 0, isDeposit: false, receipt: 'wamd-light-60' },
     { date: '24 مايو 2026', label: 'رسوم إصدار رخصة السالمية', note: 'مركز الكويت للأعمال · رخصة المحل · السالمية', status: 'مدفوع', amount: 60, paid: 60, remaining: 0, isDeposit: false, invoice: 'license-60' },
     { date: '24 مايو 2026', label: 'صيانة التكييف المركزي', note: 'صيانة نظام التكييف المركزي · USMAN G***I A***I', status: 'مدفوع', amount: 20, paid: 20, remaining: 0, isDeposit: false, receipt: 'wamd-ac-20' },
     { date: '24 مايو 2026', label: 'معدات كهربائية (العربية للإضاءة)', note: 'شراء معدات كهربائية · فاتورة العربية للإضاءة', status: 'مدفوع', amount: 62.800, paid: 62.800, remaining: 0, isDeposit: false, receipt: 'arabic-elec-62' },
     { date: '24 مايو 2026', label: 'وايرات وبراغي (الماس للتجارة)', note: 'مؤسسة الماس الفنية التجارة العامة · فاتورة نقدية · 24/05/2026', status: 'مدفوع', amount: 18.250, paid: 18.250, remaining: 0, isDeposit: false, receipt: 'almas-18' },
     { date: '25 مايو 2026', label: 'فك وتركيب المدخنة والشفاط', note: 'مقدم · MESHAL M***H F***D A***D · إجمالي 170 د.ك', status: 'جزئي', amount: 170, paid: 70, remaining: 100, isDeposit: false, receipt: 'wamd-chimney-70' },
+    { date: '26 مايو 2026', label: 'هدم حائط توسعة باب المحل القديم', note: 'لإخراج الفرن والمعدات · مقدم · مقاول محمود · إجمالي 190 د.ك', status: 'جزئي', amount: 190, paid: 100, remaining: 90, isDeposit: false, receipt: 'wamd-wall-100' },
     { date: 'مايو 2026',    label: 'رخام مدخل + أغراض سيراميك', note: 'تركيب رخام المدخل وأغراض استكمال السيراميك · مقاول محمود', status: 'مدفوع', amount: 88, paid: 88, remaining: 0, isDeposit: false, receipt: 'wamd-88' },
   ];
 
@@ -2498,6 +2499,43 @@
     <div style="font-size:0.88rem;font-weight:700;color:#1a2a6c;letter-spacing:1px;margin-bottom:16px;">MESHAL M***H F***D A***D</div>
     <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">70.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
     <div style="background:#fff8e1;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#7d5a00;margin-top:16px;direction:rtl;font-weight:600;">⏳ مقدم فك وتركيب المدخنة والشفاط — باقي 100 د.ك · الإجمالي 170 د.ك</div>
+  </div>
+</div>
+
+
+<!-- وصل WAMD 100 د.ك — استكمال الزجاج -->
+<div class="modal-overlay" id="modal-wamd-glass-100" onclick="if(event.target===this)closeModal('wamd-glass-100')">
+  <div class="modal-box" style="max-width:360px;text-align:center;direction:ltr;">
+    <button class="modal-close" onclick="closeModal('wamd-glass-100')">✕</button>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
+      <div style="width:36px;height:36px;background:#f5c800;border-radius:6px;"></div>
+      <div style="width:24px;height:36px;background:#2563eb;border-radius:6px;transform:skewX(-8deg);"></div>
+      <span style="font-size:1.4rem;font-weight:900;color:#111;letter-spacing:1px;">WAMD</span>
+    </div>
+    <div style="font-size:0.72rem;color:#7a8ab0;margin-bottom:16px;">Powered by KNET</div>
+    <div style="font-size:1rem;font-weight:700;color:#111;margin-bottom:6px;">تمت العملية بنجاح</div>
+    <div style="font-size:0.85rem;color:#7a8ab0;margin-bottom:10px;">تم الدفع إلى</div>
+    <div style="font-size:0.88rem;font-weight:700;color:#1a2a6c;letter-spacing:1px;margin-bottom:16px;">Narasimhulu J***a S***m J***a</div>
+    <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">100.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
+    <div style="background:#f0fff4;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#1e5c38;margin-top:16px;direction:rtl;font-weight:600;">✅ استكمال أعمال الزجاج — آخر دفعة · المجموع 280 د.ك</div>
+  </div>
+</div>
+
+<!-- وصل WAMD 100 د.ك — مقدم هدم حائط توسعة الباب -->
+<div class="modal-overlay" id="modal-wamd-wall-100" onclick="if(event.target===this)closeModal('wamd-wall-100')">
+  <div class="modal-box" style="max-width:360px;text-align:center;direction:ltr;">
+    <button class="modal-close" onclick="closeModal('wamd-wall-100')">✕</button>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
+      <div style="width:36px;height:36px;background:#f5c800;border-radius:6px;"></div>
+      <div style="width:24px;height:36px;background:#2563eb;border-radius:6px;transform:skewX(-8deg);"></div>
+      <span style="font-size:1.4rem;font-weight:900;color:#111;letter-spacing:1px;">WAMD</span>
+    </div>
+    <div style="font-size:0.72rem;color:#7a8ab0;margin-bottom:16px;">Powered by KNET</div>
+    <div style="font-size:1rem;font-weight:700;color:#111;margin-bottom:6px;">تمت العملية بنجاح</div>
+    <div style="font-size:0.85rem;color:#7a8ab0;margin-bottom:10px;">تم الدفع إلى</div>
+    <div style="font-size:0.88rem;font-weight:700;color:#1a2a6c;letter-spacing:1px;margin-bottom:16px;">MAHMOUD H***N E***D B***Y</div>
+    <div style="font-size:2.2rem;font-weight:900;color:#111;margin-bottom:4px;">100.000<span style="font-size:1.1rem;font-weight:600;color:#7a8ab0;margin-right:4px;">KWD</span></div>
+    <div style="background:#fff8e1;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#7d5a00;margin-top:16px;direction:rtl;font-weight:600;">⏳ مقدم هدم حائط توسعة باب المحل القديم — باقي 90 د.ك · الإجمالي 190 د.ك</div>
   </div>
 </div>
 
